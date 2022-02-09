@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>986</width>
+    <height>779</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>New Focus Laser GUI</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="connect_to_laser">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>85</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Connect Laser</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="laser_connection_label">
+    <property name="geometry">
+     <rect>
+      <x>228</x>
+      <y>88</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Laser not connected </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="aichannel_label">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>70</y>
+      <width>61</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ai channels:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="connect_to_daq">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>51</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Connect DAQ</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="aichannel_text">
+    <property name="geometry">
+     <rect>
+      <x>79</x>
+      <y>70</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ai1,ai2</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="connections_frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>331</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="connections_title">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>5</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Connections</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="id_edit">
+     <property name="geometry">
+      <rect>
+       <x>155</x>
+       <y>8</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>4106</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="id_label">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>8</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TLB ID:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="key_label">
+     <property name="geometry">
+      <rect>
+       <x>204</x>
+       <y>10</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Key:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="key_edit">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>8</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>6700 SN10064</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="daq_device_label">
+     <property name="geometry">
+      <rect>
+       <x>28</x>
+       <y>30</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Device:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="daq_device_edit">
+     <property name="geometry">
+      <rect>
+       <x>69</x>
+       <y>30</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dev1</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="timing_edit">
+     <property name="geometry">
+      <rect>
+       <x>69</x>
+       <y>90</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>PFI1</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="timing_label">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>90</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Timing:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="daq_connection_label">
+     <property name="geometry">
+      <rect>
+       <x>215</x>
+       <y>43</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>DAQ not connected</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="laser_params_frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>331</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="laser_params_title">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>6</y>
+       <width>131</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Laser Parameters</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="current_wavelength_edit">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>32</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>766</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="current_wavelength_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>32</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Curr Wavelength (nm)</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="current_wavelength_button">
+     <property name="geometry">
+      <rect>
+       <x>284</x>
+       <y>30</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Go</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="laser_power_label">
+     <property name="geometry">
+      <rect>
+       <x>29</x>
+       <y>60</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Laser Power (mW)</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="laser_power_edit">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>60</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="laser_power_button">
+     <property name="geometry">
+      <rect>
+       <x>284</x>
+       <y>58</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Go</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="scan_params_title">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>96</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Scan Parameters</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="current_wavelength_output">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>34</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>..</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="laser_power_output">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>64</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>..</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="scan_button">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>311</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Set and Scan</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="start_wavelength_edit">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>120</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>766</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="stop_wavelength_output">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>152</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>..</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="stop_wavelength_label">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>148</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stop Wavelength (nm)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="start_wavelength_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start Wavelength (nm)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="start_wavelength_output">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>122</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>..</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="stop_wavelength_edit">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>148</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>781</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="forward_speed_edit">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>176</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>4</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="forward_speed_output">
+     <property name="geometry">
+      <rect>
+       <x>171</x>
+       <y>178</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>..</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="forward_speed_label">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>176</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Forward Speed (nm/s)</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="set_params_button">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>266</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Set Params</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="save_data_checkbox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>323</y>
+       <width>51</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="scan_number_label">
+     <property name="geometry">
+      <rect>
+       <x>68</x>
+       <y>206</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string># of Scans</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="scan_number_edit">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>206</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="scan_number_output">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>208</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>..</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="backward_speed_label">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>176</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Backward</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="backward_speed_edit">
+     <property name="geometry">
+      <rect>
+       <x>255</x>
+       <y>176</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>4</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="backward_speed_output">
+     <property name="geometry">
+      <rect>
+       <x>303</x>
+       <y>178</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>..</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="filepath_edit">
+     <property name="geometry">
+      <rect>
+       <x>59</x>
+       <y>304</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;C:\Users\Xiang\Desktop\Josh\tlb6700\test.dat&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sampling_rate_label">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>234</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sampling Rate (K/s)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="total_points_label">
+     <property name="geometry">
+      <rect>
+       <x>183</x>
+       <y>234</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Total Points (K)</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="sampling_rate_edit">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>235</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>20</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="total_points_edit">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>235</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="time_taken_label">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>290</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="GraphicsLayoutWidget" name="plots_view">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>10</y>
+      <width>611</width>
+      <height>721</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QFrame" name="connections_frame_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>530</y>
+      <width>331</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="ydfa_title">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>5</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>YDFA Parameters</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ld1_label">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>34</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>LD1 (mA):</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ld1_edit">
+     <property name="geometry">
+      <rect>
+       <x>65</x>
+       <y>34</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ld2_edit">
+     <property name="geometry">
+      <rect>
+       <x>65</x>
+       <y>64</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ld2_label">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>63</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>LD2 (mA):</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="bp_edit">
+     <property name="geometry">
+      <rect>
+       <x>65</x>
+       <y>93</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="bp_label">
+     <property name="geometry">
+      <rect>
+       <x>21</x>
+       <y>92</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>BP:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ld1_button">
+     <property name="geometry">
+      <rect>
+       <x>148</x>
+       <y>32</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Go</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ld2_button">
+     <property name="geometry">
+      <rect>
+       <x>148</x>
+       <y>62</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Go</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bp_button">
+     <property name="geometry">
+      <rect>
+       <x>148</x>
+       <y>91</y>
+       <width>41</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Go</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bp_enable_button">
+     <property name="geometry">
+      <rect>
+       <x>254</x>
+       <y>83</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>BP Enable</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="get_status_button">
+     <property name="geometry">
+      <rect>
+       <x>254</x>
+       <y>7</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Get Status</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ld1_output">
+     <property name="geometry">
+      <rect>
+       <x>108</x>
+       <y>37</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>..</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ld2_output">
+     <property name="geometry">
+      <rect>
+       <x>108</x>
+       <y>67</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>..</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="bp_output">
+     <property name="geometry">
+      <rect>
+       <x>108</x>
+       <y>95</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>..</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ydfa_input_label">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>45</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Input Power:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="bp_onoff_label">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>67</y>
+       <width>61</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>BP Off</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="com_edit">
+     <property name="geometry">
+      <rect>
+       <x>183</x>
+       <y>6</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>7</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="com_label">
+     <property name="geometry">
+      <rect>
+       <x>142</x>
+       <y>6</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>COM:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>660</y>
+      <width>331</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;YDFA Important Notes:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. Input signal should be enabled before turning on LD1/LD2&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. Do not lower LD1/LD2 current before booster amplifier&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3. Do not lower LD1 current before turning off LD2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <zorder>connections_frame</zorder>
+   <zorder>connect_to_laser</zorder>
+   <zorder>laser_connection_label</zorder>
+   <zorder>aichannel_label</zorder>
+   <zorder>connect_to_daq</zorder>
+   <zorder>aichannel_text</zorder>
+   <zorder>laser_params_frame</zorder>
+   <zorder>plots_view</zorder>
+   <zorder>connections_frame_2</zorder>
+   <zorder>textBrowser</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>986</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GraphicsLayoutWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

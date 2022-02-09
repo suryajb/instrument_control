@@ -1,0 +1,18 @@
+name: research
+channels:
+  - defaults
+dependencies:
+  - pandas
+  - scipy
+  - numpy
+  - jupyterlab
+  - tqdm
+  - matplotlib
+  - pyqtgraph
+  - pyqt
+  - pyserial
+  - pip:
+    - pymeasure
+    - nidaqmx-python
+prefix: C:\ProgramData\Miniconda3\envs\research
+
