@@ -1,4 +1,4 @@
-# instrumet_control
+# instrument_control
 python control of santec, new focus, yokogawa, optilab for optical measurements
 
 enter into terminal:
